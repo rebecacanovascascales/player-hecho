@@ -1,0 +1,17 @@
+int t1 = second();
+
+void main(){
+  animate (ejecutar);
+  
+}
+void ejecutar (){
+  int a =t1 - second();
+  print (a);
+  
+  if  (a<=-5){
+    
+    t1=second();
+    background(random(256), random(256), random(256));
+  }
+  
+}
