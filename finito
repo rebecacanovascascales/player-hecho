@@ -1,5 +1,6 @@
 void main () {
 animate (menu);
+  
 
 }
 void menu(){
@@ -94,6 +95,7 @@ void menu2 (){
   imageninicio();
   imagenfin();
   player1();
+  fondo();
  
 int altura = 10;
 int anchura = 10;
@@ -103,6 +105,16 @@ line (10, altura,
 310, altura);
 altura = altura + 30;
    
+}}
+  void fondo(){
+
+    int altura = 10;
+int anchura = 10;
+ 
+for ( int n= 1; n <= 11 ; n=n + 1 ) {
+line (10, altura,
+310, altura);
+altura = altura + 30;
 }
 for (int n= 1 ; n <= 11 ; n =n + 1 ) {
 line (anchura, 10, anchura, 280) ;
@@ -149,8 +161,9 @@ void ejecutar(){
   
 }
 void player(){
-  
+ 
 	ellipse (x,y,10,15);
+  fill(49,167,158);
 }
 void controles(){
   if (keyPressed && key=="up"){
@@ -173,15 +186,29 @@ void controles(){
     x=x+1;
     
   }
+  if(x==0){
+    x=25;
+    
+  }
+  if(y==0){
+    y=285;
+  }
+  if(x==320){
+    x=25;
 }
+  if (y==320){
+    y=285;
+  }
+}
+
   void imageninicio(){
-    fill(255,255,255);
+    fill(0,0,0);
  		 textSize(6);
  		 text("INICIO", 13,270);
     
   }
 	void imagenfin(){
-    fill(255,255,255);
+    fill(0,0,0);
  		 textSize(8);
  		 text("FIN", 286,30);
     
