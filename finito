@@ -2,6 +2,7 @@ void main () {
 animate (menu);
   
 
+
 }
 void menu(){
 
@@ -86,6 +87,7 @@ void play(){
   imagenEXIT ();
   controlEXIT();
   animate (menu2);
+  
   if (mousePressed){}
   if (mouseButton == LEFTBUTTON){
     ellipse (10,10,10,10);
@@ -94,8 +96,13 @@ void play(){
 void menu2 (){
   imageninicio();
   imagenfin();
-  player1();
+ 
   fondo();
+  fondoblanco();
+  animate(fondoblanco);
+  animate(fondo);
+ 
+ 
  
 int altura = 10;
 int anchura = 10;
@@ -106,6 +113,17 @@ line (10, altura,
 altura = altura + 30;
    
 }}
+
+void fondoblanco(){
+for ( int n= 0; n < 280 ; n += 30 ) {
+  for ( int v= 0; v < 250 ; v += 30 ) {
+   fill(255,255,255);
+rect (10+n, 10+v, 30,30);
+ }
+}
+}
+
+
   void fondo(){
 
     int altura = 10;
@@ -149,22 +167,23 @@ anchura = anchura + 30;
   
 }}
 
+
+
 int x=25;
 int y=285 ;
 
-void player1() {
-  animate(ejecutar);
-}
-void ejecutar(){
+void menu3() {
   player();
   controles();
   
 }
+
 void player(){
  
 	ellipse (x,y,10,15);
   fill(49,167,158);
 }
+
 void controles(){
   if (keyPressed && key=="up"){
     print("arriba");
