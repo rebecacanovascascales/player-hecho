@@ -1,0 +1,11 @@
+void main(){
+ fondoblanco();
+}
+void fondoblanco(){
+for ( int n= 0; n < 280 ; n += 30 ) {
+  for ( int v= 0; v < 250 ; v += 30 ) {
+   fill(0,173,169);
+rect (10+n, 10+v, 30,30);
+ }
+}
+}
