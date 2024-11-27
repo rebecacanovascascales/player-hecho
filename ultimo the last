@@ -88,6 +88,8 @@ void menu2 (){
   imagenfin();
   player1();
  
+  
+  
 int altura = 10;
 int anchura = 10;
  
@@ -129,15 +131,17 @@ anchura = anchura + 30;
    
   
 }}
+
 int x=25;
 int y=285 ;
+
 void player1() {
   animate(ejecutar);
 }
 void ejecutar(){
   player();
   controles();
-  
+ temporiz();
 }
 void player(){
   
@@ -166,13 +170,13 @@ void controles(){
   }
 }
   void imageninicio(){
-    fill(255,255,255);
+    fill(0,0,0);
  		 textSize(6);
  		 text("INICIO", 13,270);
     
   }
 	void imagenfin(){
-    fill(255,255,255);
+    fill(0,0,0);
  		 textSize(8);
  		 text("FIN", 286,30);
     
@@ -205,3 +209,19 @@ void credit(){
     ellipse (10,10,10,10);
     text ("Rebeca, gracias por jugar",40,180);
   }}
+int t1= millis()/1000;
+void temporiz(){
+ println("t1:"+1);
+  println("segundos:"+second());
+  int a=5+t1 - millis()/1000;
+  println(a);
+  text (a,270,270);
+  if(a==0){
+    animate(d);
+  }}
+  void d (){
+    background(0,0,0);
+    text("YOU LOSE",0,0);
+   fill(16, 128, 32);
+  }
+
